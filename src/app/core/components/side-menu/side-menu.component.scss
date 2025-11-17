@@ -1,157 +1,153 @@
 .side-menu {
   height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: #ffffff;
+  color: #6b7280;
   transition: width 0.3s ease;
-  width: 280px;
+  width: 200px;
   display: flex;
   flex-direction: column;
-  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
   position: fixed;
-  right: 0;
+  left: 0;
   top: 0;
   z-index: 100;
 
   &.collapsed {
-    width: 80px;
+    width: 60px;
 
     .menu-label {
       display: none;
     }
 
-    .logo-text {
+    .user-info {
       display: none;
     }
 
     .menu-item {
       justify-content: center;
-      padding: 15px;
+      padding: 12px;
     }
   }
 
   .menu-header {
-    padding: 20px;
+    padding: 20px 15px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #e5e7eb;
 
-    .logo {
+    .user-profile {
       display: flex;
       align-items: center;
-      gap: 12px;
-
-      .logo-icon {
-        font-size: 28px;
-      }
-
-      .logo-text {
-        font-size: 18px;
-        font-weight: 600;
-      }
-    }
-
-    .logo-collapsed {
-      display: flex;
-      justify-content: center;
+      gap: 10px;
       width: 100%;
 
-      .logo-icon {
-        font-size: 28px;
+      .user-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
       }
-    }
 
-    .toggle-btn {
-      background: rgba(255, 255, 255, 0.1);
-      border: none;
-      color: white;
-      width: 35px;
-      height: 35px;
-      border-radius: 8px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-      font-size: 18px;
+      .user-info {
+        display: flex;
+        flex-direction: column;
 
-      &:hover {
-        background: rgba(255, 255, 255, 0.2);
-        transform: scale(1.05);
+        .user-name {
+          font-size: 14px;
+          font-weight: 600;
+          color: #1f2937;
+        }
       }
     }
   }
 
   .menu-nav {
     flex: 1;
-    padding: 20px 0;
+    padding: 10px 0;
     overflow-y: auto;
 
     &::-webkit-scrollbar {
-      width: 6px;
+      width: 4px;
     }
 
     &::-webkit-scrollbar-track {
-      background: rgba(255, 255, 255, 0.05);
+      background: transparent;
     }
 
     &::-webkit-scrollbar-thumb {
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 3px;
+      background: #d1d5db;
+      border-radius: 2px;
 
       &:hover {
-        background: rgba(255, 255, 255, 0.3);
+        background: #9ca3af;
       }
     }
 
     .menu-item {
       display: flex;
       align-items: center;
-      gap: 15px;
-      padding: 15px 25px;
-      color: rgba(255, 255, 255, 0.8);
+      gap: 12px;
+      padding: 12px 20px;
+      color: #6b7280;
       text-decoration: none;
-      transition: all 0.3s ease;
+      transition: all 0.2s ease;
       position: relative;
-      margin: 5px 10px;
-      border-radius: 10px;
+      border-left: 3px solid transparent;
 
       .menu-icon {
-        font-size: 24px;
+        font-size: 20px;
         min-width: 24px;
         display: flex;
         align-items: center;
         justify-content: center;
+        color: #9ca3af;
       }
 
       .menu-label {
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 500;
         white-space: nowrap;
       }
 
       &:hover {
-        background: rgba(255, 255, 255, 0.1);
-        color: white;
-        transform: translateX(-3px);
+        background: #f9fafb;
+        color: #374151;
+
+        .menu-icon {
+          color: #6b7280;
+        }
       }
 
       &.active {
-        background: rgba(255, 255, 255, 0.2);
-        color: white;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        background: #eff6ff;
+        color: #2563eb;
+        border-left-color: #2563eb;
 
-        &::before {
-          content: '';
-          position: absolute;
-          left: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 4px;
-          height: 60%;
-          background: white;
-          border-radius: 0 2px 2px 0;
+        .menu-icon {
+          color: #2563eb;
         }
+      }
+    }
+  }
+
+  .menu-footer {
+    padding: 20px 15px;
+    border-top: 1px solid #e5e7eb;
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      strong {
+        font-size: 14px;
+        color: #1f2937;
+        letter-spacing: 0.5px;
+      }
+
+      .version {
+        font-size: 11px;
+        color: #9ca3af;
       }
     }
   }

@@ -1,18 +1,18 @@
 <div class="top-header">
-  <div class="header-right">
-    <h2 class="page-title">داشبورد</h2>
+  <div class="search-section">
+    <span class="material-icons search-icon">search</span>
+    <input 
+      type="text" 
+      class="search-input" 
+      placeholder="Quick search"
+      [(ngModel)]="searchQuery"
+      (keyup.enter)="onSearch()">
   </div>
 
-  <div class="header-left">
-    <div class="user-section">
-      <div class="user-info">
-        <img [src]="userAvatar" alt="User Avatar" class="user-avatar">
-        <span class="user-name">{{ userName }}</span>
-      </div>
-      <button class="logout-btn" (click)="logout()">
-        <span class="logout-icon">🚪</span>
-        <span class="logout-text">خروج</span>
-      </button>
-    </div>
+  <div class="header-actions">
+    <button class="notification-btn">
+      <span class="material-icons">notifications</span>
+      <span class="notification-badge"></span>
+    </button>
   </div>
 </div>

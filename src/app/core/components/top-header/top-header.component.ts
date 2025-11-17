@@ -1,19 +1,18 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-top-header',
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './top-header.component.html',
   styleUrl: './top-header.component.scss',
   standalone: true
 })
 export class TopHeaderComponent {
-  userName = 'کاربر گرامی';
-  userAvatar = 'https://ui-avatars.com/api/?name=User&background=667eea&color=fff&size=40';
+  searchQuery = '';
 
-  logout() {
-    console.log('خروج از حساب کاربری');
-    // Add logout logic here
+  onSearch() {
+    console.log('Search:', this.searchQuery);
   }
 }

@@ -1,24 +1,13 @@
 <div class="side-menu" [class.collapsed]="isCollapsed">
   <div class="menu-header">
-    @if (!isCollapsed) {
-      <div class="logo">
-        <span class="logo-icon">💵</span>
-        <span class="logo-text">Money Assistant</span>
-      </div>
-    }
-    @if (isCollapsed) {
-      <div class="logo-collapsed">
-        <span class="logo-icon">💵</span>
-      </div>
-    }
-    <button class="toggle-btn" (click)="toggle()">
+    <div class="user-profile">
+      <img src="https://ui-avatars.com/api/?name=Dominique+Ch&background=4A90E2&color=fff&size=40" alt="User" class="user-avatar">
       @if (!isCollapsed) {
-        <span>☰</span>
+        <div class="user-info">
+          <span class="user-name">Dominique Ch.</span>
+        </div>
       }
-      @if (isCollapsed) {
-        <span>☰</span>
-      }
-    </button>
+    </div>
   </div>
 
   <nav class="menu-nav">
@@ -26,11 +15,20 @@
       <a [routerLink]="item.route" 
          routerLinkActive="active"
          class="menu-item">
-        <span class="menu-icon">{{ item.icon }}</span>
+        <span class="material-icons menu-icon">{{ item.icon }}</span>
         @if (!isCollapsed) {
           <span class="menu-label">{{ item.label }}</span>
         }
       </a>
     }
   </nav>
+
+  <div class="menu-footer">
+    @if (!isCollapsed) {
+      <div class="brand">
+        <strong>CAMIOCA</strong>
+        <span class="version">Version: 1.0.0.1+</span>
+      </div>
+    }
+  </div>
 </div>

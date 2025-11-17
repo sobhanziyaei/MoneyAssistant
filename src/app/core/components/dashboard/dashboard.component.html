@@ -1,25 +1,104 @@
 <div class="dashboard">
-  <h1 class="dashboard-title">داشبورد مالی</h1>
-  
-  <div class="stats-grid">
-    @for (stat of stats; track stat.title) {
-      <div class="stat-card" [style.border-left-color]="stat.color">
-        <div class="stat-icon" [style.background-color]="stat.color + '20'">
-          <span>{{ stat.icon }}</span>
-        </div>
-        <div class="stat-info">
-          <h3 class="stat-title">{{ stat.title }}</h3>
-          <p class="stat-value" [style.color]="stat.color">{{ stat.value }}</p>
+  <div class="dashboard-grid">
+    <!-- Company Facts Card -->
+    <div class="card company-facts">
+      <div class="card-header">
+        <h3>Company Facts</h3>
+        <button class="add-widget-btn">
+          <span class="material-icons">add</span>
+          Add widget
+        </button>
+      </div>
+      <div class="card-body">
+        <p class="label">Employees</p>
+        <div class="chart-placeholder">
+          <div class="area-chart">
+            <div class="chart-legend">
+              <div class="legend-item">
+                <span class="color-dot" style="background: #FF6B6B;"></span>
+                <span>Paris</span>
+              </div>
+              <div class="legend-item">
+                <span class="color-dot" style="background: #4ECDC4;"></span>
+                <span>Bangkok</span>
+              </div>
+              <div class="legend-item">
+                <span class="color-dot" style="background: #9B59B6;"></span>
+                <span>San Francisco</span>
+              </div>
+            </div>
+            <div class="chart-info">
+              <span class="total-label">Total</span>
+              <span class="total-value">707</span>
+            </div>
+          </div>
         </div>
       </div>
-    }
-  </div>
+    </div>
 
-  <div class="welcome-section">
-    <div class="welcome-card">
-      <h2>خوش آمدید به Money Assistant! 👋</h2>
-      <p>شما می‌توانید از این داشبورد برای مدیریت امور مالی خود استفاده کنید.</p>
-      <button class="start-btn">شروع کنید</button>
+    <!-- Statistics Card -->
+    <div class="card statistics">
+      <div class="card-header">
+        <h3>Statistics</h3>
+      </div>
+      <div class="card-body">
+        <div class="donut-chart">
+          <div class="chart-center">
+            <p>Projects by</p>
+            <p>account</p>
+          </div>
+        </div>
+        <div class="chart-legend-grid">
+          <div class="legend-item">
+            <span class="color-dot" style="background: #FF6B6B;"></span>
+            <span>KFC</span>
+          </div>
+          <div class="legend-item">
+            <span class="color-dot" style="background: #F9CA24;"></span>
+            <span>FIAT Chrysler LLC</span>
+          </div>
+          <div class="legend-item">
+            <span class="color-dot" style="background: #833471;"></span>
+            <span>KLM</span>
+          </div>
+          <div class="legend-item">
+            <span class="color-dot" style="background: #26C6DA;"></span>
+            <span>Aeroflot</span>
+          </div>
+          <div class="legend-item">
+            <span class="color-dot" style="background: #5DADE2;"></span>
+            <span>Lukoil</span>
+          </div>
+          <div class="legend-item">
+            <span class="color-dot" style="background: #AF7AC5;"></span>
+            <span>American Express</span>
+          </div>
+          <div class="legend-item">
+            <span class="color-dot" style="background: #58D68D;"></span>
+            <span>Daimler</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Assigned Risks Card -->
+    <div class="card empty-card">
+      <div class="card-header">
+        <h3>Assigned Risks</h3>
+      </div>
+      <div class="card-body empty">
+        <p>There are no risks assigned.</p>
+      </div>
+    </div>
+
+    <!-- Assigned Action Items Card -->
+    <div class="card empty-card">
+      <div class="card-header">
+        <h3>Assigned Action Items</h3>
+      </div>
+      <div class="card-body empty">
+        <p>There are no action items assigned.</p>
+      </div>
     </div>
   </div>
 </div>
