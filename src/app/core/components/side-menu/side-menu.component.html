@@ -1,1 +1,36 @@
-<p>side-menu works!</p>
+<div class="side-menu" [class.collapsed]="isCollapsed">
+  <div class="menu-header">
+    @if (!isCollapsed) {
+      <div class="logo">
+        <span class="logo-icon">💵</span>
+        <span class="logo-text">Money Assistant</span>
+      </div>
+    }
+    @if (isCollapsed) {
+      <div class="logo-collapsed">
+        <span class="logo-icon">💵</span>
+      </div>
+    }
+    <button class="toggle-btn" (click)="toggle()">
+      @if (!isCollapsed) {
+        <span>☰</span>
+      }
+      @if (isCollapsed) {
+        <span>☰</span>
+      }
+    </button>
+  </div>
+
+  <nav class="menu-nav">
+    @for (item of menuItems; track item.route) {
+      <a [routerLink]="item.route" 
+         routerLinkActive="active"
+         class="menu-item">
+        <span class="menu-icon">{{ item.icon }}</span>
+        @if (!isCollapsed) {
+          <span class="menu-label">{{ item.label }}</span>
+        }
+      </a>
+    }
+  </nav>
+</div>

@@ -1,0 +1,36 @@
+.home-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f7fa;
+
+  .main-content {
+    flex: 1;
+    margin-right: 280px;
+    transition: margin-right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+
+    .content-wrapper {
+      margin-top: 70px;
+      flex: 1;
+    }
+  }
+
+  &.menu-collapsed {
+    .main-content {
+      margin-right: 80px;
+    }
+
+    app-top-header {
+      ::ng-deep .top-header {
+        right: 80px;
+      }
+    }
+  }
+}
+
+// Global styles for better RTL support
+* {
+  direction: rtl;
+  text-align: right;
+}

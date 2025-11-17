@@ -1,0 +1,25 @@
+<div class="dashboard">
+  <h1 class="dashboard-title">داشبورد مالی</h1>
+  
+  <div class="stats-grid">
+    @for (stat of stats; track stat.title) {
+      <div class="stat-card" [style.border-left-color]="stat.color">
+        <div class="stat-icon" [style.background-color]="stat.color + '20'">
+          <span>{{ stat.icon }}</span>
+        </div>
+        <div class="stat-info">
+          <h3 class="stat-title">{{ stat.title }}</h3>
+          <p class="stat-value" [style.color]="stat.color">{{ stat.value }}</p>
+        </div>
+      </div>
+    }
+  </div>
+
+  <div class="welcome-section">
+    <div class="welcome-card">
+      <h2>خوش آمدید به Money Assistant! 👋</h2>
+      <p>شما می‌توانید از این داشبورد برای مدیریت امور مالی خود استفاده کنید.</p>
+      <button class="start-btn">شروع کنید</button>
+    </div>
+  </div>
+</div>

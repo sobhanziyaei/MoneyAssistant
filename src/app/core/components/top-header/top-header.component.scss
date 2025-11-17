@@ -1,0 +1,106 @@
+.top-header {
+  height: 70px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  position: fixed;
+  top: 0;
+  right: 280px;
+  left: 0;
+  z-index: 50;
+  transition: right 0.3s ease;
+
+  .header-right {
+    .page-title {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 600;
+      color: #333;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  .header-left {
+    .user-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .user-info {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 8px 16px;
+        background: #f8f9fa;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: #e9ecef;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-avatar {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 2px solid #667eea;
+          object-fit: cover;
+        }
+
+        .user-name {
+          font-size: 15px;
+          font-weight: 500;
+          color: #333;
+        }
+      }
+
+      .logout-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+
+        .logout-icon {
+          font-size: 18px;
+        }
+
+        .logout-text {
+          font-size: 14px;
+        }
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+        }
+
+        &:active {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}
+
+// Responsive for collapsed menu
+.menu-collapsed {
+  .top-header {
+    right: 80px;
+  }
+}

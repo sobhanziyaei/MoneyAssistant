@@ -1,0 +1,18 @@
+<div class="top-header">
+  <div class="header-right">
+    <h2 class="page-title">داشبورد</h2>
+  </div>
+
+  <div class="header-left">
+    <div class="user-section">
+      <div class="user-info">
+        <img [src]="userAvatar" alt="User Avatar" class="user-avatar">
+        <span class="user-name">{{ userName }}</span>
+      </div>
+      <button class="logout-btn" (click)="logout()">
+        <span class="logout-icon">🚪</span>
+        <span class="logout-text">خروج</span>
+      </button>
+    </div>
+  </div>
+</div>
