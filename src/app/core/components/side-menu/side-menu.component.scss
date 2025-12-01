@@ -6,9 +6,9 @@
   width: 200px;
   display: flex;
   flex-direction: column;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.05);
   position: fixed;
-  left: 0;
+  right: 0;
   top: 0;
   z-index: 100;
 
@@ -37,6 +37,7 @@
 
     .user-profile {
       display: flex;
+      flex-direction: row-reverse;
       align-items: center;
       gap: 10px;
       width: 100%;
@@ -87,12 +88,13 @@
       display: flex;
       align-items: center;
       gap: 12px;
+      flex-direction: row-reverse;
       padding: 12px 20px;
       color: #6b7280;
       text-decoration: none;
       transition: all 0.2s ease;
       position: relative;
-      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
 
       .menu-icon {
         font-size: 20px;
@@ -121,7 +123,7 @@
       &.active {
         background: #eff6ff;
         color: #2563eb;
-        border-left-color: #2563eb;
+        border-right-color: #2563eb;
 
         .menu-icon {
           color: #2563eb;
