@@ -135,6 +135,9 @@
   .menu-footer {
     padding: 20px 15px;
     border-top: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 
     .brand {
       display: flex;
@@ -150,6 +153,30 @@
       .version {
         font-size: 11px;
         color: #9ca3af;
+      }
+    }
+
+    .toggle-btn {
+      width: 100%;
+      padding: 10px;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6b7280;
+
+      .material-icons {
+        font-size: 20px;
+      }
+
+      &:hover {
+        background: #f3f4f6;
+        color: #374151;
+        border-color: #d1d5db;
       }
     }
   }
