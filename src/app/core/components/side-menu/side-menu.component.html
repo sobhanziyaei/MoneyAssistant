@@ -1,34 +1,33 @@
 <div class="side-menu" [class.collapsed]="isCollapsed">
   <div class="menu-header">
     <div class="user-profile">
-      <img src="https://ui-avatars.com/api/?name=Dominique+Ch&background=4A90E2&color=fff&size=40" alt="User" class="user-avatar">
+      <img src="https://ui-avatars.com/api/?name=Dominique+Ch&background=4A90E2&color=fff&size=40" alt="User"
+        class="user-avatar">
       @if (!isCollapsed) {
-        <div class="user-info">
-          <span class="user-name">Dominique Ch.</span>
-        </div>
+      <div class="user-info">
+        <span class="user-name">Dominique Ch.</span>
+      </div>
       }
     </div>
   </div>
 
   <nav class="menu-nav">
     @for (item of menuItems; track item.route) {
-      <a [routerLink]="item.route" 
-         routerLinkActive="active"
-         class="menu-item">
-        <span class="material-icons menu-icon">{{ item.icon }}</span>
-        @if (!isCollapsed) {
-          <span class="menu-label">{{ item.label }}</span>
-        }
-      </a>
+    <a [routerLink]="item.route" routerLinkActive="active" class="menu-item">
+      @if (!isCollapsed) {
+      <span class="menu-label">{{ item.label }}</span>
+      }
+      <span class="material-icons menu-icon">{{ item.icon }}</span>
+    </a>
     }
   </nav>
 
   <div class="menu-footer">
     @if (!isCollapsed) {
-      <div class="brand">
-        <strong>CAMIOCA</strong>
-        <span class="version">Version: 1.0.0.1+</span>
-      </div>
+    <div class="brand">
+      <strong>Money Assistant</strong>
+      <span class="version">Version: 1.0.0</span>
+    </div>
     }
     <button class="toggle-btn" (click)="toggle()" [title]="isCollapsed ? 'باز کردن منو' : 'بستن منو'">
       <span class="material-icons">{{ isCollapsed ? 'keyboard_arrow_left' : 'keyboard_arrow_right' }}</span>

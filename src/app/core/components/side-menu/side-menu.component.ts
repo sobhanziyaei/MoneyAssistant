@@ -15,50 +15,10 @@ export class SideMenuComponent {
 
   menuItems = [
     {
-      label: 'Dashboard',
+      label: 'داشبورد',
       icon: 'dashboard',
       route: '/dashboard'
     },
-    {
-      label: 'People',
-      icon: 'people',
-      route: '/people'
-    },
-    {
-      label: 'Projects',
-      icon: 'folder',
-      route: '/projects'
-    },
-    {
-      label: 'Calendar',
-      icon: 'calendar_today',
-      route: '/calendar'
-    },
-    {
-      label: 'Training',
-      icon: 'school',
-      route: '/training'
-    },
-    {
-      label: 'Timesheet',
-      icon: 'access_time',
-      route: '/timesheet'
-    },
-    {
-      label: 'Reports',
-      icon: 'assessment',
-      route: '/reports'
-    },
-    {
-      label: 'Administration',
-      icon: 'settings',
-      route: '/administration'
-    },
-    {
-      label: 'Help',
-      icon: 'help_outline',
-      route: '/help'
-    }
   ];
 
   toggle() {

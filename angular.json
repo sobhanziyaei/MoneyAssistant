@@ -30,6 +30,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/fonts/fonts-vazir.css",
               "src/styles.scss"
             ],
             "scripts": [],
